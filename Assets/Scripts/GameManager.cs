@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        blocks = new GameObject[6, 6];
+        blocks = new GameObject[7, 7];
         InitialSetup();
     }
 
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         Vector2Int gridPoint = GridForBlock(blockObject);
         List<Vector2Int> locations = block.MoveLocations(gridPoint);
 
-        locations.RemoveAll(gp => gp.x < 0 || gp.x > 5 || gp.y < 0 || gp.y > 5);
+        locations.RemoveAll(gp => gp.x < 1 || gp.x > 6 || gp.y < 1 || gp.y > 6);
 
         return locations;
     }
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject BlockAtGrid(Vector2Int gridPoint)
     {
-        if (gridPoint.x > 5 || gridPoint.y > 5 || gridPoint.x < 0 || gridPoint.y < 0)
+        if (gridPoint.x > 7 || gridPoint.y > 7 || gridPoint.x < 0 || gridPoint.y < 0)
         {
             return null;
         }
@@ -82,9 +82,9 @@ public class GameManager : MonoBehaviour
 
     public Vector2Int GridForBlock(GameObject block)
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < 7; j++)
             {
                 if (blocks[i, j] == block)
                 {

@@ -69,7 +69,7 @@ public class MoveSelector : MonoBehaviour
 
         GameManager.Instance.DeselectBlock(movingBlock);
         TileSelector selector = GetComponent<TileSelector>();
-        // selector.EnterState();
+        selector.EnterState();
     }
 
     public void EnterState(GameObject block)
@@ -99,7 +99,7 @@ public class MoveSelector : MonoBehaviour
         tileHighlight.SetActive(false);
         GameManager.Instance.DeselectBlock(movingBlock);
         movingBlock = null;
-        // selector.EnterState();
+        selector.EnterState();
         foreach (GameObject highlight in locationHighlights)
         {
             Destroy(highlight);
