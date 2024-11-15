@@ -89,6 +89,7 @@ public class MoveSelector : MonoBehaviour
         {
             GameObject highlight;
             highlight = Instantiate(moveLocationPrefab, Geometry.PointFromGrid(loc), Quaternion.identity, gameObject.transform);
+            locationHighlights.Add(highlight);
         }
     }
 

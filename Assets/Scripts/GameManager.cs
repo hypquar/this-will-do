@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         Vector2Int gridPoint = GridForBlock(blockObject);
         List<Vector2Int> locations = block.MoveLocations(gridPoint);
 
-        locations.RemoveAll(gp => gp.x < 1 || gp.x > 6 || gp.y < 1 || gp.y > 6);
+        locations.RemoveAll(gp => gp.x < 1 || gp.x > 6 || gp.y < 1 || gp.y > 6 || ((gp.x < 3 || gp.x > 4) && (gp.y < 3 || gp.y > 4)));
 
         return locations;
     }

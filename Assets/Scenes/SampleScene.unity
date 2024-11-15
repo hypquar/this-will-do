@@ -263,7 +263,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 186646, guid: 81871a7d538556b4bac9f2ce0ee55b09, type: 3}
       propertyPath: m_Name
-      value: Tree (1)
+      value: Tree
       objectReference: {fileID: 0}
     - target: {fileID: 452838, guid: 81871a7d538556b4bac9f2ce0ee55b09, type: 3}
       propertyPath: m_LocalPosition.x
@@ -335,7 +335,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 186646, guid: 81871a7d538556b4bac9f2ce0ee55b09, type: 3}
       propertyPath: m_Name
-      value: Tree (3)
+      value: Tree
       objectReference: {fileID: 0}
     - target: {fileID: 452838, guid: 81871a7d538556b4bac9f2ce0ee55b09, type: 3}
       propertyPath: m_LocalPosition.x
@@ -568,7 +568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 186646, guid: 81871a7d538556b4bac9f2ce0ee55b09, type: 3}
       propertyPath: m_Name
-      value: Tree (2)
+      value: Tree
       objectReference: {fileID: 0}
     - target: {fileID: 452838, guid: 81871a7d538556b4bac9f2ce0ee55b09, type: 3}
       propertyPath: m_LocalPosition.x
@@ -691,7 +691,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.76470596, g: 1, b: 0.3921569, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

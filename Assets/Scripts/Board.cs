@@ -8,7 +8,7 @@ public class Board : MonoBehaviour
     public GameObject AddBlock(GameObject block, int col, int row)
     {
         Vector2Int gridPoint = Geometry.GridPoint(col, row);
-        GameObject newBlock = Instantiate(block, Geometry.PointFromGrid(gridPoint), Quaternion.identity, gameObject.transform);
+        GameObject newBlock = Instantiate(block, Geometry.BlockPointFromGrid(gridPoint), Quaternion.identity, gameObject.transform);
         return newBlock;
     }
 
@@ -19,7 +19,7 @@ public class Board : MonoBehaviour
 
     public void MoveBlock(GameObject block, Vector2Int gridPoint)
     {
-        block.transform.position = Geometry.PointFromGrid(gridPoint);
+        block.transform.position = Geometry.BlockPointFromGrid(gridPoint);
     }
 
     public void SelectBlock(GameObject block)
