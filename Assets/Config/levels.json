@@ -1,0 +1,24 @@
+{
+
+    "level1" : {
+        "size" : "2x2",
+        "blocks" : {
+            "block1" : [1, 4],
+            "block2" : [3, 6],
+            "block3" : [6, 4],
+            "block4" : [2, 3]
+        },
+        "material" : "../Materials/Blocks/1_BasicBlock.mat"
+    },
+
+    "level2" : {
+        "size" : "2x2",
+        "blocks" : {
+            "block1" : [2, 3],
+            "block2" : [3, 1],
+            "block3" : [3, 2],
+            "block4" : [5, 3]
+        },
+        "material" : "../Materials/Blocks/1_BasicBlock.mat"
+    }
+}

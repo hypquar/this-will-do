@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private void InitialSetup()
     {
         AddBlock(levelBlock, 3, 1);
+        AddBlock(levelBlock, 6, 3);
     }
 
     public void AddBlock(GameObject prefab, int col, int row)
