@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     {
         AddBlock(levelBlock, 3, 1);
         AddBlock(levelBlock, 6, 3);
+        AddBlock(levelBlock, 2, 4);
+        AddBlock(levelBlock, 4, 5);
     }
 
     public void AddBlock(GameObject prefab, int col, int row)
@@ -48,6 +50,8 @@ public class GameManager : MonoBehaviour
         List<Vector2Int> locations = block.MoveLocations(gridPoint);
 
         locations.RemoveAll(gp => gp.x < 1 || gp.x > 6 || gp.y < 1 || gp.y > 6 || ((gp.x < 3 || gp.x > 4) && (gp.y < 3 || gp.y > 4)));
+
+        locations.RemoveAll(gp => BlockPresent(gp));
 
         return locations;
     }
@@ -79,6 +83,17 @@ public class GameManager : MonoBehaviour
             return null;
         }
         return blocks[gridPoint.x, gridPoint.y];
+    }
+
+    public bool BlockPresent(Vector2Int gridPoint)
+    {
+        GameObject block = BlockAtGrid(gridPoint);
+
+        if (block == null) {
+            return false;
+        }
+
+        return true;
     }
 
     public Vector2Int GridForBlock(GameObject block)
